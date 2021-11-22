@@ -50,7 +50,7 @@ case $customaction in
 
 # Traversing over multiple values #
 echo
-echo "Generating Shell for last 5 users present in /etc/passwd file"
+echo "Generating Last password change date for users provided."
 for userlogins in `cat /home/glassbreak/userdetails | tail -5` ;
         do
                 userpassword=`chage -l $userlogins | grep 'Last password change' | cut -d':' -f2-`
